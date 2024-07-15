@@ -1,19 +1,18 @@
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.With;
+import lombok.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+
+@Value
 @AllArgsConstructor
-@Builder
 
 public class Course {
     @With
     private String id;
     private String name;
     private Teacher teacher;
-    private List<Student> students=new ArrayList<>();
+    private List<Student> students;
+
+
 }
